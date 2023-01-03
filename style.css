@@ -5,10 +5,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth; 
   }
 
   body {
     background-color: #f099d8;
+    padding: 10px; 
+  }
+
+  a {
+    text-decoration: none;
   }
 
   li {
@@ -16,11 +22,15 @@
     display: inline-block; /* not sure what this does though*/
   }
 
+  img {
+    width: 100%; 
+  }
+
   /* NAV */
 
   nav {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #ffffff;
@@ -28,11 +38,21 @@
     box-shadow: 0 25px 20px -20px rgb(0, 0, 0, 0.4);
   }
 
-  .nav_link--list {
+  .nav_header {
     display: flex;
+    justify-content: space-between;
+    padding: 10px;
   }
 
-  .nav_link {
+  .nav_link--list {
+    display: flex;
+    align-items: center;
+    }
+  .nav_links {
+    padding-left: 500px;
+  }
+
+  a {
     padding-left: 25px; 
     padding-right: 25px;
     padding-top: 5px;
@@ -44,7 +64,7 @@
   /*btw need to rewatch video to write explanation comments of this code
   link: https://www.youtube.com/watch?v=mu-sc9OO2Pw&t=16s */
 
-  .nav_link:hover::after{
+  a:hover::after{
     content: '';
     border-radius: 35px;
     position: relative;
@@ -52,14 +72,14 @@
     transition: opacity 3000s;
   }
 
-  .nav_link:hover {
+  a:hover {
     color: #ffffff;
     border-radius: 35px;
     background-color: #a5518d;
     opacity: 0.8;
   }
 
-  .nav_link:after {
+  a:after {
     transition: all 3000s;
   }
 
